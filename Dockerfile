@@ -21,3 +21,5 @@ RUN wget https://github.com/saltstack/salt/archive/v${VERSION}.tar.gz \
 
 ## Add Run Fil# 4505 = Salt Pub ; 4506 = Salt Req
 EXPOSE 4505 4506
+
+CMD /usr/bin/salt-master
