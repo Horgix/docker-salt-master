@@ -19,9 +19,5 @@ RUN wget https://github.com/saltstack/salt/archive/v${VERSION}.tar.gz \
     && tar xzf v${VERSION}.tar.gz \
     && pip install ./salt-${VERSION}/
 
-# Volumes
-
-VOLUME ['/etc/salt', '/var/cache/salt', '/var/logs/salt', '/etc/salt', '/srv/salt']
-
 ## Add Run Fil# 4505 = Salt Pub ; 4506 = Salt Req
 EXPOSE 4505 4506
