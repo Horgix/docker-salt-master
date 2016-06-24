@@ -19,7 +19,7 @@ RUN wget ${TARBALL} \
     && tar xzf develop.tar.gz \
     && pip install ./salt-develop/
 
-## Add Run Fil# 4505 = Salt Pub ; 4506 = Salt Req
+# 4505 = Salt Pub ; 4506 = Salt Req
 EXPOSE 4505 4506
 
 CMD /usr/bin/salt-master
