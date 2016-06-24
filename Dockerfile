@@ -1,9 +1,7 @@
 FROM alpine:latest
 MAINTAINER Alexis Horgix Chotard <alexis.horgix.chotard@gmail.com>
 
-ENV VERSION 2016.3.1
-ENV TARBALL_BASE salt-${VERSION}
-ENV TARBALL https://github.com/saltstack/salt/releases/download/v${VERSION}/${TARBALL_BASE}.tar.gz
+ENV TARBALL https://github.com/saltstack/salt/archive/develop.tar.gz
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk --update --update-cache upgrade \
     && apk add \
@@ -18,8 +16,8 @@ RUN apk --update --update-cache upgrade \
     && update-ca-certificates \
     && pip install --upgrade pip
 RUN wget ${TARBALL} \
-    && tar xzf ${TARBALL_BASE}.tar.gz \
-    && pip install ./${TARBALL_BASE}/
+    && tar xzf develop.tar.gz \
+    && pip install ./salt-develop/
 
 ## Add Run Fil# 4505 = Salt Pub ; 4506 = Salt Req
 EXPOSE 4505 4506
