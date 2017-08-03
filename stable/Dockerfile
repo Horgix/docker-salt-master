@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Alexis Horgix Chotard <alexis.horgix.chotard@gmail.com>
 
-ENV VERSION 2016.3.1
+ENV VERSION 2017.7.0
 ENV TARBALL_BASE salt-${VERSION}
 ENV TARBALL https://github.com/saltstack/salt/releases/download/v${VERSION}/${TARBALL_BASE}.tar.gz
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
