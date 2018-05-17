@@ -18,7 +18,7 @@ RUN apk --update --update-cache upgrade \
     && update-ca-certificates \
     && pip install --upgrade pip
 RUN wget ${TARBALL} \
-    && tar xzf ${TARBALL_BASE}.tar.gz \
+    && tar xzf v${VERSION}.tar.gz \
     && pip install ./${TARBALL_BASE}/
 
 # 4505 = Salt Pub ; 4506 = Salt Req
